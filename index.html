@@ -10,7 +10,7 @@
             integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="styles.css" />
+        <!-- <link rel="stylesheet" href="styles.css" /> -->
     </head>
     <body>
         <nav class="navbar lg:navbar-expand bg-1" data-bs-theme="dark">
@@ -147,19 +147,31 @@
                         (ragged, neat, muscular)
                     </small>
                 </div>
-
                 <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
                     <input
                         type="checkbox"
-                        id="ageShapeCheckbox"
+                        id="ageCheckbox"
                         class="check check-sm align-bottom"
                         checked
                     />
-                    <label for="ageShapeCheckbox" class="ps-2"> Shape </label>
+                    <label for="ageCheckbox" class="ps-2"> Age </label>
                     <small class="fg-secondary ps-2">
-                         (old, round, young)
+                         (old, new, young)
                          </small>
                 </div>
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                    <input
+                        type="checkbox"
+                        id="shapeCheckbox"
+                        class="check check-sm align-bottom"
+                        checked
+                    />
+                    <label for="shapeCheckbox" class="ps-2"> Shape </label>
+                    <small class="fg-secondary ps-2">
+                         (square, round, spherical)
+                         </small>
+                </div>
+                
                 <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
                     <input
                         type="checkbox"
@@ -181,7 +193,7 @@
                     />
                     <label for="originCheckbox" class="ps-2"> Origin</label>
                     <small class="fg-secondary ps-2">
-                        (Polish, animist, Southern)
+                        (Polish, Elven, Southern)
                     </small>
                 </div>
 
@@ -202,25 +214,13 @@
                 <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
                     <input
                         type="checkbox"
-                        id="typeCheckbox"
-                        class="check check-sm align-bottom"
-                        checked
-                    />
-                    <label for="typeCheckbox" class="ps-2"> Type </label>
-                    <small class="fg-secondary ps-2">
-                        (electric, two-sided, pick-up)
-                    </small>
-                </div>
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
-                    <input
-                        type="checkbox"
                         id="purposeCheckbox"
                         class="check check-sm align-bottom"
                         checked
                     />
                     <label for="purposeCheckbox" class="ps-2"> Purpose </label>
                     <small class="fg-secondary ps-2">
-                        (welding, polishing, sports)
+                        (cooking, cleaning, sleeping)
                     </small>
                 </div>
             </div>
@@ -233,6 +233,6 @@
             integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
             crossorigin="anonymous"
         ></script>
-        <script src="main.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
