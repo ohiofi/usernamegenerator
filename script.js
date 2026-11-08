@@ -46,7 +46,7 @@ function generate() {
         result += capitalize(choice(wordlists[each]));
       }
     }
-    result += capitalize(choice(wordlists["noun"]))
+    result += capitalize(choice(wordlists["noun"][vocablistDropdown.value])).replaceAll(/\s/g, "").replaceAll("-","");
     resultDisplay.innerHTML += result + "<br>"
   }
 
