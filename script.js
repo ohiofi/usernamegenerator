@@ -13,8 +13,8 @@ async function loadData() {
   }
 }
 
-function choice(listname){
-    let randDecimalNum = Math.random() * listname.length;
+function choice(listname) {
+  let randDecimalNum = Math.random() * listname.length;
   let randIntNum = Math.floor(randDecimalNum);
   return listname[randIntNum];
 }
@@ -29,18 +29,28 @@ function shuffle(array) {
   }
 }
 
+function capitalize(mystr){
+  return mystr.substring(0,1).toUpperCase() + mystr.substring(1);
+}
+
 function generate() {
-  let result = "";
-  let categories = ["opinion","size","quality","age","shape","color","origin","material","purpose"];
-  shuffle(categories);
-  limitedCategories = categories.slice(0,3);
-  for(const each of categories){
-    if(limitedCategories.includes(each)){
-      result += choice(wordlists[each]) + " "
+  resultDisplay.innerHTML = "";
+  for (let i = 0; i < 10; i++) {
+    let result = "";
+    let categories = ["opinion", "size", "quality", "age", "shape", "color", "origin", "material", "purpose"];
+    shuffle(categories);
+    limitedCategories = categories.slice(0, numWords.value - 1);
+    for (const each of categories) {
+      if (limitedCategories.includes(each)) {
+        // result += choice(wordlists[each]) + " "
+        result += capitalize(choice(wordlists[each]));
+      }
     }
+    result += capitalize(choice(wordlists["noun"]))
+    resultDisplay.innerHTML += result + "<br>"
   }
-  result += choice(wordlists["noun"])
-  alert(result)
+
+
 
 }
 

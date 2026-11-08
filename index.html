@@ -108,9 +108,9 @@
         </nav>
 
         <div class="container my-5">
-            <h1>Hello, world!</h1>
-            <div class="row px-0 ">
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+            <h1 class="mx-0">Hello, world!</h1>
+            <div class="row mx-2">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="opinionCheckbox"
@@ -123,7 +123,7 @@
                     </small>
                 </div>
 
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="sizeCheckbox"
@@ -135,7 +135,7 @@
                          (smol, huge, tall)
                          </small>
                 </div>
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="qualityCheckbox"
@@ -147,7 +147,7 @@
                         (ragged, neat, muscular)
                     </small>
                 </div>
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="ageCheckbox"
@@ -159,7 +159,7 @@
                          (old, new, young)
                          </small>
                 </div>
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="shapeCheckbox"
@@ -172,7 +172,7 @@
                          </small>
                 </div>
                 
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="colorCheckbox"
@@ -184,7 +184,7 @@
                         (scarlet, purplish, graying)
                     </small>
                 </div>
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="originCheckbox"
@@ -197,7 +197,7 @@
                     </small>
                 </div>
 
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="materialCheckbox"
@@ -211,7 +211,7 @@
                         (pearl, iron, nylon)
                     </small>
                 </div>
-                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-1">
+                <div class="fs-xs container p-2 sm:col-12 md:col-4 lg:col-3 xl:col-2">
                     <input
                         type="checkbox"
                         id="purposeCheckbox"
@@ -223,9 +223,25 @@
                         (cooking, cleaning, sleeping)
                     </small>
                 </div>
+                <div class="fs-xs container p-2 sm:col-12 md:col-5 lg:col-4 xl:col-2">
+                    <div class="input-group">
+  <label for="numWords" class="input-group-text" id="basic-addon1">Words</label>
+  <input style="min-width: 50px;" type="number" class="form-control" id="numWords" value="3" min="1" max="10" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+                </div>
+                <div class="fs-xs container p-2 sm:col-12 md:col-5 lg:col-4 xl:col-2">
+                    <button type="button" class="btn" onclick="generate()">Generate</button>
+                </div>
             </div>
+            
             <hr />
+            <div class="container my-5 font-monospace" id="resultDisplay">
+
+            </div>
         </div>
+
+        
 
         <script
             type="module"
